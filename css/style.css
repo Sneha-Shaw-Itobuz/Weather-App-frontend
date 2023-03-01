@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@200;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  font-family: "Arial", sans-serif;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  padding: 40px;
+  width: 100%;
+  height: 100vh;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  color: #fff;
+}
+
+h3 {
+  font-size: 3rem;
+  margin-bottom: 6rem;
+}
+
+.degree h4 {
+  font-size: 5rem;
+}
+
+.degree p {
+  font-size: 1.7rem;
+}
+
+.weather-info {
+  flex-direction: row;
+  width: 40%;
+  justify-content: space-around;
+}
+
+.yellow {
+  color: yellow;
+  font-size: 8rem;
+}
+
+.info {
+  padding: 20px;
+  font-size: 2rem;
+}
+
+.info div {
+  margin: 20px 0;
+}
