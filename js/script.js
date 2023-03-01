@@ -2,9 +2,6 @@ const locationName = document.querySelector("h3");
 const degree = document.querySelector(".degree h4");
 const feels = document.querySelector(".degree p");
 let response;
-const icon = document.querySelector(".icon");
-const sunny = `<i class="fa-solid fa-cloud-sun yellow"></i>`;
-const cloudy = `<i class="fas fa-regular fa-cloud"></i>`;
 
 const otherInfo = document.querySelector(".info");
 
@@ -34,10 +31,4 @@ function addData() {
     <div>Humidity: ${response.current.humidity}</div>
     <div>Wind Speed: ${response.current.wind_mph} MPH</div>
     `;
-
-  if (response.current.temp_c > 15) {
-    icon.innerHTML = sunny;
-  } else {
-    icon.innerHTML = cloudy;
-  }
 }

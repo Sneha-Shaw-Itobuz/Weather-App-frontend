@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@200;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Playfair Display", serif;
-  font-family: "Arial", sans-serif;
+  font-family: 'Tilt Neon', cursive;
 }
 
 .flex-box {
@@ -18,8 +18,7 @@
   padding: 40px;
   width: 100%;
   height: 100vh;
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  background-color: #3937FA;
   color: #fff;
 }
 
@@ -34,17 +33,13 @@ h3 {
 
 .degree p {
   font-size: 1.7rem;
+  color: skyblue;
+  font-weight:600;
 }
 
 .weather-info {
   flex-direction: row;
-  width: 40%;
-  justify-content: space-around;
-}
-
-.yellow {
-  color: yellow;
-  font-size: 8rem;
+  width: 28%;
 }
 
 .info {
@@ -54,4 +49,18 @@ h3 {
 
 .info div {
   margin: 20px 0;
+}
+
+.icon {
+  width: 40%;
+}
+
+.icon img {
+  width: 100%;
+}
+
+.degree {
+  width: 40%;
+  margin-bottom: 2rem;
+
 }
