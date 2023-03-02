@@ -20,7 +20,7 @@
   padding: 10px;
   top: 100%;
   color: #000;
-  right: 30%;
+  right: 40%;
   z-index: 20;
   visibility: hidden;
 }
@@ -52,7 +52,6 @@ input {
 
 .top {
   width: 90%;
-  margin-bottom: 6rem;
   flex-direction: row;
   position: relative;
 }
@@ -68,6 +67,12 @@ input {
   background-color: #3937fa;
   color: #fff;
   text-align: center;
+  justify-content: flex-start;
+}
+
+.degree {
+  margin-bottom: 2rem;
+  margin-left: 1rem;
 }
 
 .degree h4 {
@@ -82,6 +87,7 @@ input {
 
 .weather-info {
   flex-direction: row;
+  margin: 4rem 0;
 }
 
 .info {
@@ -101,9 +107,8 @@ input {
   width: 100%;
 }
 
-.degree {
-  /* width: 40%; */
-  margin-bottom: 2rem;
+.bottom-text {
+  font-size: 2rem;
 }
 
 @media (min-width: 300px) {
@@ -118,11 +123,15 @@ input {
   .weather-info {
     width: 100%;
   }
+
+  .bottom-text {
+    width: 100%;
+  }
 }
 
 @media (min-width: 800px) {
   .top a {
-    width: 7%;
+    width: 4%;
   }
 
   input {
@@ -131,5 +140,9 @@ input {
 
   .weather-info {
     width: 28%;
+  }
+
+  .bottom-text {
+    width: 50%;
   }
 }

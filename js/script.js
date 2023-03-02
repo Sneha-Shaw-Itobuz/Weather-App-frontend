@@ -1,9 +1,9 @@
 const locationName = document.querySelector("input");
 const degree = document.querySelector(".degree h4");
 const feels = document.querySelector(".degree p");
-let response;
-let path;
 const icon = document.querySelector(".icon img");
+
+let response, icon_path;
 
 // get weather data using api
 async function getWeatherData(query) {
@@ -14,22 +14,28 @@ async function getWeatherData(query) {
       return data.json();
     })
     .catch((err) => {
-      console.log(err);
+      alert(err);
     });
-  addWeatherData();
+
+  if (!response.error) {
+    addWeatherData();
+  } else {
+    alert(response.error.message);
+  }
 }
 
 function addWeatherData() {
   locationName.value = `${response.location.name}`;
   degree.innerHTML = `${response.current.temp_c}<sup>o</sup>`;
   feels.innerHTML = `Feels ${response.current.feelslike_c}<sup>o</sup>`;
-  path = response.current.condition.icon.replace(
+
+  icon_path = response.current.condition.icon.replace(
     "//cdn.weatherapi.com",
     "../assets"
   );
-  path = path.replace(".png", ".svg");
-  // icon.src = response.current.condition.icon;
-  icon.src = path;
+  icon_path = icon_path.replace(".png", ".svg");
+
+  icon.src = icon_path;
 }
 
 locationName.addEventListener("keyup", (e) => {
