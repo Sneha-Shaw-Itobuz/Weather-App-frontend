@@ -146,3 +146,38 @@ input {
     width: 50%;
   }
 }
+
+.suggestion {
+  position: absolute;
+  top: 100%;
+  background-color: #fff;
+  width: 40%;
+  height: 30vh;
+  opacity: 0.8;
+  overflow: scroll;
+  color: #000;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.hide {
+  display: none;
+}
+
+.suggestion ul {
+  margin-top: 60px;
+  list-style: none;
+  width: 100%;
+}
+
+.suggestion ul li {
+  margin: 20px 0;
+  font-size: 1.7rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.suggestion hr {
+  width: 100%;
+}
