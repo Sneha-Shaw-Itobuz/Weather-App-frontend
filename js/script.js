@@ -60,7 +60,7 @@ suggestion.firstElementChild.addEventListener("click", (e) => {
 });
 
 window.addEventListener("click", (e) => {
-  if (e.target === locationName || e.target == suggestion) {
+  if (e.target === locationName || e.target === suggestion) {
     suggestion.classList.remove("hide");
   } else {
     suggestion.classList.add("hide");
