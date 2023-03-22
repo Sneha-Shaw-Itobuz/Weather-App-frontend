@@ -12,9 +12,6 @@ const allCities = [];
 async function getWeatherData(query) {
   if (query.length !== 0) {
     console.log(query);
-    // let response = await fetch(
-    //   `http://api.weatherapi.com/v1/current.json?key=0c80b2b56f1943ada19100744230103&q=${query}&aqi=no`
-    // )
     await fetch(`http://localhost:5000/get-weather?city=${query}`)
       .then((data) => {
         return data.json();
@@ -95,7 +92,6 @@ function addSuggestion() {
 }
 
 (() => {
-  // addSuggestion()
   getAllCities();
   getWeatherData("Kolkata");
 })();
