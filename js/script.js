@@ -1,8 +1,8 @@
 const locationName = document.querySelector("input");
 const degree = document.querySelector(".degree h4");
 const feels = document.querySelector(".degree p");
-const icon = document.querySelector(".icon img");
-const suggestion = document.querySelector(".suggestion");
+const weatherIcon = document.querySelector(".weather-icon img");
+const suggestion = document.querySelector(".suggestion-box");
 
 let iconPath;
 
@@ -36,13 +36,13 @@ function addWeatherData(res) {
   feels.innerHTML = `Feels ${res.data.current.feelslikeC}<sup>o</sup>`;
 
   if (res.data.current.cloud < 20) {
-    icon.src = "../assets/weather/64x64/day/113.svg";
+    weatherIcon.src = "../assets/weather/64x64/day/113.svg";
   } else if (res.data.current.cloud > 20 && res.data.current.cloud < 50) {
-    icon.src = "../assets/weather/64x64/day/116.svg";
+    weatherIcon.src = "../assets/weather/64x64/day/116.svg";
   } else if (res.data.current.cloud > 50 && res.data.current.cloud < 80) {
-    icon.src = "../assets/weather/64x64/day/119.svg";
+    weatherIcon.src = "../assets/weather/64x64/day/119.svg";
   } else if (res.data.current.cloud > 80 && res.data.current.cloud < 101) {
-    icon.src = "../assets/weather/64x64/day/143.svg";
+    weatherIcon.src = "../assets/weather/64x64/day/143.svg";
   }
 }
 
