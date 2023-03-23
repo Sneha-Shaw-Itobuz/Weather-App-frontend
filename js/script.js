@@ -11,7 +11,7 @@ const allCities = [];
 // get weather data using api
 async function getWeatherData(query) {
   if (query.length !== 0) {
-    console.log(query);
+   
     await fetch(`http://localhost:5000/get-weather?city=${query}`)
       .then((data) => {
         return data.json();
@@ -27,19 +27,19 @@ async function getWeatherData(query) {
 }
 
 function addWeatherData(res) {
-  console.log(res);
+  
   locationName.value = `${res.data.location.name}`;
   degree.innerHTML = `${res.data.current.tempC}<sup>o</sup>`;
   feels.innerHTML = `Feels ${res.data.current.feelslikeC}<sup>o</sup>`;
 
   if (res.data.current.cloud < 20) {
-    weatherIcon.src = "../assets/weather/64x64/day/113.svg";
+    weatherIcon.src = "../assets/weather/113.svg";
   } else if (res.data.current.cloud > 20 && res.data.current.cloud < 50) {
-    weatherIcon.src = "../assets/weather/64x64/day/116.svg";
+    weatherIcon.src = "../assets/weather/116.svg";
   } else if (res.data.current.cloud > 50 && res.data.current.cloud < 80) {
-    weatherIcon.src = "../assets/weather/64x64/day/119.svg";
+    weatherIcon.src = "../assets/weather/119.svg";
   } else if (res.data.current.cloud > 80 && res.data.current.cloud < 101) {
-    weatherIcon.src = "../assets/weather/64x64/day/143.svg";
+    weatherIcon.src = "../assets/weather/143.svg";
   }
 }
 
@@ -69,8 +69,8 @@ async function getAllCities() {
     .then((data) => {
       return data.json();
     })
-    .then((d) => {
-      d.forEach((city) => {
+    .then((cities) => {
+      cities.forEach((city) => {
         allCities.push(city);
       });
     })
