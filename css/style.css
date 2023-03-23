@@ -44,6 +44,7 @@ input {
   color: #fff;
   width: 70%;
   margin: 0 20px;
+  font-size: 1.5rem;
 }
 
 .top:hover .tooltip-text {
@@ -86,6 +87,7 @@ input {
 }
 
 .weather-info {
+  width: 100%;
   flex-direction: row;
   margin: 4rem 0;
 }
@@ -108,50 +110,15 @@ input {
 }
 
 .bottom-text {
+  width: 100%;
   font-size: 2rem;
-}
-
-@media (min-width: 300px) {
-  .top a {
-    width: 10%;
-  }
-
-  input {
-    font-size: 1.5rem;
-  }
-
-  .weather-info {
-    width: 100%;
-  }
-
-  .bottom-text {
-    width: 100%;
-  }
-}
-
-@media (min-width: 800px) {
-  .top a {
-    width: 4%;
-  }
-
-  input {
-    font-size: 3rem;
-  }
-
-  .weather-info {
-    width: 28%;
-  }
-
-  .bottom-text {
-    width: 50%;
-  }
 }
 
 .suggestion-box {
   position: absolute;
   top: 100%;
   background-color: #fff;
-  width: 40%;
+  width: 90%;
   height: 30vh;
   opacity: 0.8;
   color: #000;
@@ -187,4 +154,30 @@ input {
   border-right: none;
   border-left: none;
   border-bottom: none;
+}
+
+.top a {
+  width: 10%;
+}
+
+@media (min-width: 800px) {
+  .top a {
+    width: 4%;
+  }
+
+  input {
+    font-size: 3rem;
+  }
+
+  .weather-info {
+    width: 28%;
+  }
+
+  .bottom-text {
+    width: 50%;
+  }
+
+  .suggestion-box {
+    width: 40%;
+  }
 }
